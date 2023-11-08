@@ -1,0 +1,51 @@
+from time import sleep
+from random import randint,choice
+print('\033[1;33mOlá, sou seu COMPUTADOR, vamos jogar JOKENPÔ!!\033[m')
+print('///////////////////////////////////////////////')
+sleep(1)
+print('''Escolha sua opçao:
+[ 0 ] PEDRA
+[ 1 ] PAPEL
+[ 2 ] TESOURA''')
+playr = int(input('Eae vai escolhor o que? '))
+print('OK, PREPARADO? ')
+sleep(1)
+print('\033[1;36mJO\033[m')
+sleep(1)
+print('\033[1;36mKEN\033[m')
+sleep(1)
+print('\033[1;36mPO\033[m')
+lista = ['PEDRA', 'PAPEL', 'TESOURA']
+pc = randint(0, 2)
+print('\033[1;31m--#--\033[m'*10)
+print('Eu escolhi {}'.format(lista[pc]))
+print('Voce escolheu {}'.format(lista[playr]))
+print('\033[1;31m--#--\033[m'*10)
+if pc == 0:
+    if playr == 0:
+        print('EMPATAMOS')
+    elif playr == 1:
+        print('\033[1;32mVOCE GANHOU, PARABÉNS\033[m!!')
+    elif playr == 2:
+        print('EBAA... EU GANHEI!!')
+    else:
+        print('\033[1;31mJOGADA INVÁLIDA!!\033[m')
+elif pc == 1:
+    if playr == 0:
+        print('EBAA.. EU GANHEI!!')
+    elif playr == 1:
+        print('EMPATAMOS!!')
+    elif playr == 2:
+        print('\033[1;32m VOCE GANHOU, PARANÉNS\033[m !! ')
+    else:
+        print('\033[1;31mJOGADA INVÁLIDA\033[m')
+elif pc == 2:
+    if playr == 0:
+        print('\033[1;32mVOCE GANHOU, PARABÉNS\033[m!!')
+    elif playr == 1:
+        print('EBAAA... EU GANHEI!!')
+    elif playr == 2:
+        print('EMPATAMOS!!')
+    else:
+        print('\033[1;31mJOGADA INVÁLIDA!!\033[m')
+        
